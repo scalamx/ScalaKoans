@@ -6,12 +6,12 @@ class AboutMaps extends KoanSuite {
 
   koan("Maps can be created easily") {
     val myMap = Map("MI" -> "Michigan", "OH" -> "Ohio", "WI" -> "Wisconsin", "IA" -> "Iowa")
-    myMap.size should be(__)
+    myMap.size should be(4)
   }
 
   koan("Maps contain distinct pairings") {
     val myMap = Map("MI" -> "Michigan", "OH" -> "Ohio", "WI" -> "Wisconsin", "MI" -> "Michigan")
-    myMap.size should be(__)
+    myMap.size should be(3)
   }
 
   koan("Maps can be added to easily") {
@@ -19,7 +19,7 @@ class AboutMaps extends KoanSuite {
 
     val aNewMap = myMap + ("IL" -> "Illinois")
 
-    aNewMap.contains("IL") should be(__)
+    aNewMap.contains("IL") should be(true)
 
   }
 
@@ -28,12 +28,12 @@ class AboutMaps extends KoanSuite {
 
     val mapValues = myMap.values
 
-    mapValues.size should be(__)
+    mapValues.size should be(3)
 
-    mapValues.head should be(__)
+    mapValues.head should be("Michigan")
 
     val lastElement = mapValues.last
-    lastElement should be(__)
+    lastElement should be("Wisconsin")
 
     // for (mval <- mapValues) println(mval)
 
@@ -46,9 +46,9 @@ class AboutMaps extends KoanSuite {
 
     val mapValues = myMap.values
 
-    mapValues.size should be(__)
+    mapValues.size should be(3)
 
-    myMap("MI") should be(__)
+    myMap("MI") should be("Meechigan")
   }
 
   koan("Map keys may be of mixed type") {
